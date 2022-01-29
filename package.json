@@ -15,5 +15,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^14.3.2"
   }
 }

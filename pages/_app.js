@@ -10,6 +10,19 @@ function GlobalStyle() {
       body {
         font-family: "Open Sans", sans-serif;
       }
+      *::-webkit-scrollbar {
+        width: 12px; /* width of the entire scrollbar */
+      }
+
+      *::-webkit-scrollbar-track {
+        background: #29333d; /* color of the tracking area */
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #212931; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+        /*border: 3px solid orange;  creates padding around scroll thumb */
+      }
       /* App fit Height */
       html,
       body,

@@ -6,9 +6,8 @@ import { createClient } from "@supabase/supabase-js";
 import { ButtonSendSticker } from "../src/components/ButtonSendSticker";
 
 // Como fazer AJAX: https://medium.com/@omariosouto/entendendo-como-fazer-ajax-com-a-fetchapi-977ff20da3c6
-const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MDg2OTA3MywiZXhwIjoxOTU2NDQ1MDczfQ.343ibq7UYFPDdyfsfGmEqUma01RW7P7KC9U2MDAGSkI";
-const SUPABASE_URL = "https://kysxypdmtxjlkdysdlas.supabase.co";
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 function escutaMensagensEmTempoReal(adicionaMensagem) {
@@ -89,6 +88,7 @@ export default function ChatPage() {
         backgroundSize: "cover",
         backgroundBlendMode: "multiply",
         color: appConfig.theme.colors.neutrals["000"],
+        maxWidth: "100vw",
       }}
     >
       <Box
